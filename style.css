@@ -33,14 +33,26 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+
+.register-btn {
+  margin-left: auto;    /* pushes itself to the far right */
+  background: #e50914;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .hero {
-  background: url('images/posterupdated.jpeg') center center/contain no-repeat;
-  height: 100vh;
+  background: url('images/posterfield.png') center center/contain no-repeat;
+  height: 150vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
+
 .hero-content h1 {
   font-size: 3.5rem;
 }
@@ -232,7 +244,7 @@ footer {
 .results-carousel {
   position: relative;
   background: #111;
-  padding: 20px 40px;
+  padding: 20px 150px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -248,7 +260,6 @@ footer {
   height: 40px;
   cursor: pointer;
   flex-shrink: 0;
-  display: none;
   position: relative;
 }
 .carousel-btn:hover {
@@ -341,4 +352,3 @@ footer {
   font-size: 18px;
   color: #888;
 }
-

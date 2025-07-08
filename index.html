@@ -1,85 +1,333 @@
 <!DOCTYPE html>
-<html lang="="en">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Soccer World Cup</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<div class="header-wrapper">
-  <!-- Top Utility Bar -->
-  <div class="top-utility-bar">
-    <a href="https://instagram.com/sahabacup" target="_blank" class="social-link">
-      <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0,0,256,256">
-        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z"></path></g></g>
-      </svg>
-      @sahabacup
-    </a>
-  </div>
-  <!--Logo (Overlapping)-->
-  <div class="logo-overlay">
-    <img src="images/sahabacup logo.png" class="logo" alt="Tournament Logo" />
-  </div>
-
-  <!-- Main Navbar -->
-  <header class="navbar" style="justify-content: flex-start;">
-    <nav class="region-nav">
-      <a href="#home">Home</a>
-      <a href="#format">Format</a>
-      <a href="#teams">Teams</a>
-      <a href="#register">Register</a>
-      <a href="#sponsor">Sponsor</a>
-    </nav>
-  </header>
-</div>
-
-<section class="results-carousel">
-  <button class="carousel-btn prev" aria-label="Previous">&larr;</button>
-  <div class="carousel-track">
-    <!-- Repeat this .result-card for each match -->
-  <div class="result-card">
-  <div class="match-time">Jul 11 • 7:30 PM</div>
-  <div class="match-location">Toronto Pan Am Sports Centre</div>
-
-  <div class="match-body">
-    <div class="team-block">
-      <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
-      <span class="team-code">STINGERS</span>
+  <div class="header-wrapper">
+    <!-- Top Utility Bar -->
+    <div class="top-utility-bar">
+      <a href="https://instagram.com/sahabacup" target="_blank" class="social-link">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0,0,256,256">
+          <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <g transform="scale(5.12,5.12)">
+              <path
+                d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z">
+              </path>
+            </g>
+          </g>
+        </svg>
+        @sahabacup
+      </a>
+    </div>
+    <!--Logo (Overlapping)-->
+    <div class="logo-overlay">
+      <img src="images/Logo - Trans. White.png" class="logo" alt="Tournament Logo" />
     </div>
 
-    <div class="vs-block">@</div>
-
-    <div class="team-block">
-      <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
-      <span class="team-code">SHOOTING STARS</span>
-    </div>
+    <!-- Main Navbar -->
+    <header class="navbar" style="justify-content: flex-start;">
+      <nav class="region-nav">
+        <a href="#home">Home</a>
+        <a href="#format">Format</a>
+        <a href="#teams">Teams</a>
+        <a href="#register">Register</a>
+        <a href="#sponsor">Sponsor</a>
+      </nav>
+      <a href="https://forms.gle/YOUR_FORM_LINK" class="btn register-btn" target="_blank">
+        Register on Google Form
+      </a>
+    </header>
   </div>
-</div>
 
+  <section class="results-carousel">
+    <button class="carousel-btn prev" aria-label="Previous">&larr;</button>
+    <div class="carousel-track">
+      <!-- Repeat this .result-card for each match -->
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
 
-  <div class="result-card">
-  <div class="match-time">06/10 • 9:00 PM FRA</div>
-  <div class="match-body">
-    <div class="team-block">
-      <img src="images/Celta de Vigo.png" alt="PRS Logo">
-      <span class="team-code">PRS</span>
-      <span class="team-score">4</span>
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">30 August • 9h AM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <div class="result-card">
+        <div class="match-time">Jul 11 • 7:30 PM</div>
+        <div class="match-location">Toronto Pan Am Sports Centre</div>
+
+        <div class="match-body">
+          <div class="team-block">
+            <img src="images/Athletic Bilbao.png" alt="Stingers Logo">
+            <span class="team-code">STINGERS</span>
+          </div>
+
+          <div class="vs-block">@</div>
+
+          <div class="team-block">
+            <img src="images/FC Barcelona.png" alt="Shooting Stars Logo">
+            <span class="team-code">SHOOTING STARS</span>
+          </div>
+        </div>
+      </div>
+      <!-- add as many .result-card items as needed -->
     </div>
-    <div class="vs-block">–</div>
-    <div class="team-block">
-      <img src="images/Atlético de Madrid.png" alt="FLX Logo">
-      <span class="team-code">FLX</span>
-      <span class="team-score">2</span>
-    </div>
-  </div>
-</div>
-    <!-- add as many .result-card items as needed -->
-  </div>
-  <button class="carousel-btn next" aria-label="Next">&rarr;</button>
-</section>
+    <button class="carousel-btn next" aria-label="Next">&rarr;</button>
+  </section>
 
-<!-- Hero Section -->
+  <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="hero-content">
       <h1>Soccer World Cup 2025</h1>
@@ -96,27 +344,29 @@
   <section id="teams" class="section">
     <h2>Participating Teams</h2>
     <div class="team-grid">
-      <div class="team-card"><img src="assets/team1.png" alt="Team 1"/><p>Team Alpha</p></div>
-      <div class="team-card"><img src="assets/team2.png" alt="Team 2"/><p>Team Blaze</p></div>
+      <div class="team-card"><img src="assets/team1.png" alt="Team 1" />
+        <p>Team Alpha</p>
+      </div>
+      <div class="team-card"><img src="assets/team2.png" alt="Team 2" />
+        <p>Team Blaze</p>
+      </div>
     </div>
   </section>
 
-  <section id="register" class="section">
-    <h2>Register Your Team</h2>
-    <a href="https://forms.gle/YOUR_FORM_LINK" class="btn">Register on Google Form</a>
-  </section>
-
   <section id="sponsors" class="section sponsors">
-     <h2>Our Sponsor</h2>
+    <h2>Our Sponsor</h2>
 
-  <div class="sponsor-logos">
-    <img src="images/Visibility- logo orange.png" alt="Penny Appeal" />
-  </div>
+    <div class="sponsor-logos">
+      <img src="images/Visibility- logo orange.png" alt="Penny Appeal" />
+    </div>
 
-  <!--  ▼ Add this ▼ -->
-  <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/3mO4-M9gUjU?si=rK4KCJ3V48mawaF2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
+    <!--  ▼ Add this ▼ -->
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/3mO4-M9gUjU?si=rK4KCJ3V48mawaF2"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
   </section>
 
   <footer>
@@ -125,4 +375,5 @@
 
   <script src="main.js"></script>
 </body>
+
 </html>
