@@ -1,0 +1,344 @@
+:root {
+  --logo-height: 200px; /* match .logo-overlay img height */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding-top: calc(6px + 10px + var(--logo-height) / 2);
+  font-family: 'Segoe UI', sans-serif;
+  background: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  top: 0;
+  z-index: 999;
+  margin-top: 0;
+}
+.navbar .logo {
+  height: 100px;
+  margin-bottom: 0;
+}
+.navbar nav a {
+  color: #111;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hero {
+  background: url('images/posterupdated.jpeg') center center/contain no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 3.5rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 10px 0 20px;
+}
+.btn {
+  background: #e50914;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.section {
+  padding: 80px 40px;
+  text-align: center;
+}
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+.team-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+  width: 160px;
+}
+.team-card img {
+  width: 100%;
+}
+.sponsors .sponsor-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+.sponsor-logos img {
+  height: 50px;
+}
+footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Move logo down on scroll */
+.header-wrapper.scrolled .logo-overlay {
+  top: 100%;
+  transform: translate(-50%, -40%);
+  transition: top 0.3s ease;
+}
+
+/* Shrink utility bar & navbar if you like */
+.header-wrapper.scrolled .top-utility-bar {
+  padding: 4px 95px;
+  left: -7%;
+}
+.header-wrapper.scrolled .top-utility-bar a{
+  padding: 4px 95px;
+
+}
+.header-wrapper.scrolled .navbar {
+  padding: 8px 40px;
+}
+
+
+/* 1. Top Utility Bar */
+.top-utility-bar {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease;
+  background: #111;
+  color: #fff;
+  padding: 6px 145px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  font-size: 0.9rem;
+  z-index: 10;
+}
+
+.logo-overlay {
+  position: absolute;
+  top: 50%;                      /* halfway down utility-bar + navbar */
+  left: 3%;
+  transform: translate(-50%, -30%);
+  z-index: 20;
+  transition: top 0.3s ease;
+ }
+
+.logo-overlay img {
+  height: 200px; /* Adjust as needed */
+  height: var(--logo-height);
+}
+.top-utility-bar .social-link {
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-utility-bar .social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* 2. Secondary Region Nav */
+.region-nav {
+  background: #fff;
+  padding: 8px 40px 0 90px; /* Remove bottom padding */
+  display: flex;
+  justify-content: flex-start;
+  gap: 24px;
+  overflow-x: visible;
+  white-space: normal; /* Allow wrapping */
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.region-nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 4px 0;
+  position: relative;
+}
+
+.region-nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background: #e50914;
+  transition: width 0.2s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.region-nav a:hover::after,
+.region-nav a.active::after {
+  width: 100%;
+}
+
+/* 3. Adjust your existing .navbar up a bit */
+.navbar {
+  background: #fff;
+  padding: 10px 40px;
+  position: relative; /* still in flow */
+  z-index: 5;
+}
+
+/* Square video embed, max 300px wide */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;       /* adjust this to your desired square size */
+  margin: 40px auto 0;    /* center and push down */
+  padding-bottom: 50%;   /* 1:1 aspect ratio => square */
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  border: 0;
+}
+
+.results-carousel {
+  position: relative;
+  background: #111;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Buttons */
+.carousel-btn {
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: none;
+  position: relative;
+}
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+.carousel-btn.prev { margin-right: 10px; }
+.carousel-btn.next { margin-left: 10px; }
+
+/* Track */
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  scrollbar-width: none; /* Firefox */
+}
+.carousel-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual cards */
+/* Card container */
+.result-card {
+  background: #222;
+  border-radius: 8px;
+  padding: 16px;
+  width: 180px;
+  text-align: center;
+  color: #fff;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Date/time at top */
+.match-time {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* New: style for location beneath time */
+.match-location {
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+/* Main body: two teams + vs */
+.match-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Each team block */
+.team-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.team-score {
+  display: none;  /* ensure scores are hidden */
+}
+/* Logo */
+.team-block img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Team code */
+.team-code {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Score */
+.team-score {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e50914;
+}
+
+/* The “vs” dash in the middle */
+.vs-block {
+  font-size: 18px;
+  color: #888;
+}
+
